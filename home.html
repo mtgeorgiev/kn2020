@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Тестваме</title>
+        <link href="style.css" rel="stylesheet" />
+        <script src="script.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <form method="post" action="form.php" id="form">
+            <div>
+                <label for="username"> User name </label>
+                <input type="name" id="username" name="username" />
+            </div>
+
+            <div>
+                <label for="password"> Password </label>
+                <input type="password" name="password" id="password" />
+            </div>
+
+            <div>
+                <label for="gender_F"> Female </label>
+                <input type="radio" name="gender" value="F" id="gender_F"/>
+
+                <label for="gender_M"> Male </label>
+                <input type="radio" name="gender" value="M" id="gender_M"/>
+
+                <label for="gender_0"> Other </label>
+                <input type="radio" name="gender" value="O" id="gender_0"/>
+            </div>
+            <input type="date" name="birthdate" />
+
+            <div>
+                <label for="kurkuma">Куркума</label>
+                <input type="checkbox" name="meals[]" value="kurkuma" id="kurkuma"/>
+
+                <label for="asparagus">Аспержа</label>
+                <input type="checkbox" name="meals[]" value="asparagus" id="asparagus"/>
+            </div>
+
+            <select name="age[]" multiple="true">
+                <optgroup label="Young">
+                    <option value="1"> Kid (0-12) </option>
+                    <option value="2"> Teen (13-19) </option>
+                </optgroup>
+                <optgroup label="Стари">
+                    <option value="3"> Adult (20+) </option>
+                    <option value="4"> Adult (200+) </option>
+                </optgroup>
+            </select>
+
+
+            <label for="browser"> Browser </label>
+            <input list="browsers-list" id="browser" name="browser"/>
+
+            <datalist id="browsers-list">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+            </datalist>
+
+            <textarea name="text"></textarea>
+
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>

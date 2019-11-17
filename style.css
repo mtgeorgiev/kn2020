@@ -1,0 +1,42 @@
+* {
+    
+}
+
+a {
+    color: #cfc1ea;
+    font-size: 53px;
+}
+
+#link1 {
+    font-size: 30px;
+    color: gray;
+}
+
+.url {
+    color: magenta;
+}
+
+[href="abv.bg"] {
+    color: green;
+}
+
+.url.red {
+    color: red;
+}
+
+#link1:hover {
+    color: purple;
+}
+
+#content {
+    text-decoration: underline;
+    height: 200px;
+    background: yellow;
+}
+
+#small-div {
+    background: blue;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
