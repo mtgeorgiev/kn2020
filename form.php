@@ -6,12 +6,21 @@ $response = [];
 
 switch ($_SERVER['REQUEST_METHOD']) {
     case 'GET':
-        $response = Request::get();
+        if (isset($_GET['id'])) {
+            $response = Request::getOne($_GET['id']);
+        } else {
+            $response = Request::getAll();
+        }
         break;
     case 'POST':
         $rawData = file_get_contents("php://input");
         $formData = json_decode($rawData, true);
         $response = Request::create($formData);
+        break;
+    case 'PUT':
+        $rawData = file_get_contents("php://input");
+        $formData = json_decode($rawData, true);
+        $response = Request::update($_GET['id'], $formData);
         break;
     case 'DELETE':
         $response = Request::delete($_GET['id']);
