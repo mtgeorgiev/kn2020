@@ -24,8 +24,6 @@ class Request {
 
     public static function getAll(): array {
 
-        Db::getConnection()->query("set names 'utf8'")->fetch();
-
         $sql   = "SELECT * FROM users";
 
         $query = Db::getConnection()->query($sql);

@@ -1,5 +1,21 @@
 <?php
 
+// perform authorization and authentication
+
+// 1. authentication
+if (!isset($_GET['token'])) {
+    // throw bad request exception
+}
+
+// if the token from $_GET['token'] is not in the db or is expired - throw not authenticated exception
+
+// if the token is valid, get the user id
+
+
+// 2. authentication
+// check if the user (by the user id we already have) has access to the resource
+
+
 require_once 'Request.php';
 
 $response = [];
